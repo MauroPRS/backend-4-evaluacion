@@ -18,8 +18,16 @@ from django.contrib import admin
 from django.urls import path
 from Cine import views
 
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('cine/',views.CineList.as_view()),
-    path('cine/<int:pk>',views.CineDetail.as_view())
+    path('cine/<int:pk>',views.CineDetail.as_view()),
+
+    path('funcion/',views.FuncionList.as_view()),
+    path('funcion/<int:pk>',views.FuncionDetail.as_view()),
+
+    path('sala/',views.SalaList.as_view()),
+    path('sala/<int:pk>',views.SalaDetail.as_view()),
 ]
+
